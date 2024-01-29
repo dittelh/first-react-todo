@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #87ceeb;
+    border-bottom: #261f8b 5px solid;
+}
+
+.header .logo {
+    height: 3rem;
+}
+
+.header h1 {
+    color: #261f8b;
+}

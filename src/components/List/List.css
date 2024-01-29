@@ -1,0 +1,10 @@
+.listDiv{
+    height: 100vh;
+
+    background-color: #d3effa;
+}
+
+.listDiv .listItems{
+    display: flex;
+    margin: 0;
+}
