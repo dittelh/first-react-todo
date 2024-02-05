@@ -39,3 +39,9 @@
   border: none;
   font-weight: 800;
 }
+
+.addTaskDiv .addTaskBtn:hover {
+  background-color: #362bd1;
+  color: white;
+  cursor: pointer;
+}

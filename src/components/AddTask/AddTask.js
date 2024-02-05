@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AddTask.css';
 
-const AddTask = () => {
+const AddTask = ({ addTask }) => {
   const [task, setTask] = useState('');
 
   const handleTaskChange = (e) => {
@@ -9,21 +9,25 @@ const AddTask = () => {
   };
 
   const handleAddTodo = () => {
-    if (task.trim() !== '') {
-    //   setTodos([...todos, { id: Date.now(), text: task, completed: false }]);
-      setTask('');
+    if (task.trim() === '') {
+      return;
     }
+    addTask({text: task})
+    setTask('');
   };
+
   return (
-    <div className='addTaskDiv'>
+    <div className="addTaskDiv">
       <input
-      className='taskInput'
+        className="taskInput"
         type="text"
         placeholder="Tilføj en opgave til listen"
         value={task}
         onChange={handleTaskChange}
       />
-      <button className='addTaskBtn' onClick={handleAddTodo}>TILFØJ</button>
+      <button className="addTaskBtn" onClick={handleAddTodo}>
+        TILFØJ
+      </button>
     </div>
   );
 };

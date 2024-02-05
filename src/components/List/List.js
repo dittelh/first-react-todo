@@ -1,10 +1,15 @@
-import React from 'react';
 import './List.css';
+import Task from '../Task';
 
-const List = () => {
+const List = ({ deleteTask, tasks, toggleComplete }) => {
+
   return (
-    <div className='listDiv'>
-      <p className='listItems'>{/* Map over 'todos' and render each todo as a list item */}</p>
+    <div className="listDiv">
+      <ul className="listItems">
+        {tasks.map((task) => (
+          <Task key={task.id} task={task} deleteTask={deleteTask} toggleComplete={toggleComplete}/>
+        ))}
+      </ul>
     </div>
   );
 };
